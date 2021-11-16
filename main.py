@@ -11,24 +11,20 @@ model = pickle.load(open('model.pickle', 'rb'))
 def home():
     return render_template('index.html')    
 
-# @app.route('/predict',methods=['POST'])
-@app.route('/predict')
+@app.route('/predict',methods=['POST'])
+# @app.route('/predict')
 def predict():
         
-    final_features = np.array([[0,20,0,0.0,0.0,0,1,0,110.0,110.0,70.0,22.0,70.0,100.0]])
+    # final_features = np.array([[0,20,0,0.0,0.0,0,1,0,110.0,110.0,70.0,22.0,70.0,100.0]])
+    # prediction = model.predict(final_features)
+    # retrive values from Form
+    init_features = [x for x in request.form.values()]
+    final_features = [np.array(init_features)]
+
+    # make prediction
     prediction = model.predict(final_features)
 
     return render_template('index.html', prediction_text= f' {prediction}.')
-
-@app.route('/predict_api')
-def predict_api():
-    '''
-    For direct API calls trought request
-    '''
-    final_features = np.array([[0,20,0,0.0,0.0,0,1,0,110.0,110.0,70.0,22.0,70.0,100.0]])
-    prediction = model.predict(final_features)
-
-    return (f'final_prediction: {prediction}')
 
 if __name__ == "__main__":
     app.run(debug=True)
