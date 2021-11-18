@@ -23,8 +23,14 @@ def predict():
     # prediction = model.predict(final_features)
     # retrive values from Form
     init_features = [x for x in request.form.values()]
+    column_list = ['gender', 'age', 'education', 'currentSmoker', 'cigsPerDay', 'BPMeds',
+       'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP',
+       'diaBP', 'BMI', 'heartRate', 'glucose', 'TenYearCHD']
+    for index, item in enumerate(init_features):
+        userinput = {}
+        userinput[column_list[index]] = item
     chd_user.insert_one({
-       init_features
+       userinput
     })
     final_features = [np.array(init_features)]
     # make prediction
