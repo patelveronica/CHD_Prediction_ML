@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, iedirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 from config import mongo_uri
 import pickle
@@ -30,7 +30,7 @@ def predict():
     # make prediction
     prediction = model.predict(final_features)
 
-    return render_template('index.html', prediction_text= f' {prediction}.')
+    return redirect(url_for('index.html'))
 
 if __name__ == "__main__":
     app.run(debug=True)
