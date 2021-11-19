@@ -2,19 +2,15 @@
 **Analysis of Framingham Heart Study
 
 **Domain :
-
 Healthcare
 
 **Table of Contents:
-
 Information
 Loading Dataset
 Data Cleansing & EDA
 Conclusion
 Source (Download On Request) : https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs
-
 ![coronary-heart-disease-chd-n](https://user-images.githubusercontent.com/85118624/127723313-de5f65a3-b149-4a21-bc8b-cc02fd205b58.jpg)
-
 
 **Details : 
 
@@ -59,7 +55,6 @@ And finally the response variable : + TenYearCHD : The 10 year risk of coronary 
 6. How is our variables distributed? Are they imbalanced?
 7. What are the weakness of this dataset?
 
-
 **Objective :
 
 To build a classification model that predicts heart disease in a subject. (Target column to predict is 'TenYearCHD' where CHD = Coronary Heart Disease)
@@ -76,17 +71,13 @@ To build a classification model that predicts heart disease in a subject. (Targe
 
 The Framingham Risk Score (FRS) has driven cardiovascular disease risk screening for many years. In general, there are 2 main problems with current dataset. First, this screening happened based on known risk factors and not the actual presence of disease. Second, it is based on epidemiology.
 Epidemiologic data can be tricky because it tells us about issues in a given population. However, it does NOT necessarily indicate risk for a specific person.
->>>>>>> aedcb661887a552e5335746579e69e6e79234254
-
-**Domain : Healthcare
 
 **Importing Libraries:
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-%matplotlib inline
-import seaborn as sns
+1. import pandas as pd
+2. import numpy as np
+3. import matplotlib.pyplot as plt
+4. %matplotlib inline
+5. import seaborn as sns
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
@@ -96,9 +87,9 @@ from sklearn.metrics import confusion_matrix, accuracy_score, roc_curve, classif
 import pickle
 import Flask
 
-
 **Tech used to deploy the app:
-Database to store user input: MongoDB
+
+1. Database to store user input: MongoDB
 Model saved: Ml_Model.py
 Flask App: app.py
 Procfile.txt
