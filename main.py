@@ -1,30 +1,42 @@
-from flask import Flask, render_template, request
-#from flask_cors import cross_origin
+from flask import Flask, render_template, request, redirect
 import pickle
 import numpy as np
+import pandas as pd
 
 app = Flask(__name__, template_folder= 'Template')
 model = pickle.load(open('model.pickle', 'rb'))
 
-
+# create app route
 @app.route('/')
 def home():
-    return render_template('index.html')    
+
+    # read the csv file
+    prediction_information = pd.read_csv("result.csv")
+    # model_list = []
+    # for information in prediction_information.iloc[0]:
+    #     model_list.append(information)
+    # model_list = [float(x) for x in model_list]    
+    final_features = np.array(prediction_information.to_numpy())
+    
+    #make prediction
+    prediction = model.predict(final_features)
+            
+    return render_template('index.html', prediction_text = prediction)
 
 @app.route('/predict',methods=['POST'])
-# @app.route('/predict')
+
 def predict():
-        
-    # final_features = np.array([[0,20,0,0.0,0.0,0,1,0,110.0,110.0,70.0,22.0,70.0,100.0]])
-    # prediction = model.predict(final_features)
-    # retrive values from Form
     init_features = [x for x in request.form.values()]
-    final_features = [np.array(init_features)]
+    column_list = ['male', 'age', 'currentSmoker', 'cigsPerDay', 'BPMeds',
+       'prevalentStroke', 'prevalentHyp', 'diabetes', 'totChol', 'sysBP',
+       'diaBP', 'BMI', 'heartRate', 'glucose']
+    results = pd.DataFrame([init_features], columns = column_list)
+    results.to_csv("result.csv", index = False)
+    for index, item in enumerate(init_features):
+        userinput = {}
+        userinput[column_list[index]] = item
 
-    # make prediction
-    prediction = model.predict(final_features)
-
-    return render_template('index.html', prediction_text= f' {prediction}.')
+    return redirect('/')
 
 if __name__ == "__main__":
     app.run(debug=True)
