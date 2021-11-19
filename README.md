@@ -78,23 +78,24 @@ Epidemiologic data can be tricky because it tells us about issues in a given pop
 3. import matplotlib.pyplot as plt
 4. %matplotlib inline
 5. import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score, roc_curve, classification_report
-import pickle
-import Flask
+6. from sklearn.model_selection import train_test_split
+7. from sklearn.linear_model import LogisticRegression
+8. from sklearn.neighbors import KNeighborsClassifier
+9. from sklearn.ensemble import RandomForestClassifier
+10. from sklearn.tree import DecisionTreeClassifier
+11. from sklearn.metrics import confusion_matrix, accuracy_score, roc_curve, classification_report
+12. import pickle
+13. import Flask
 
 **Tech used to deploy the app:
 
-1. Database to store user input: MongoDB
-Model saved: Ml_Model.py
-Flask App: app.py
-Procfile.txt
-model.pickle
-Webpage: index.html
-style.css
+1. User Input saved in: csv
+2. Model saved: Ml_Model.py
+3. Flask App: app.py
+4. Procfile.txt
+5. model.pickle
+6. Webpage: index.html
+7. style.css
+8. Bootstrap
 
 
