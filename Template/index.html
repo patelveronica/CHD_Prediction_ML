@@ -17,7 +17,6 @@
   <div class="col-md-12">   
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html">Home</a><span class="sr-only">(current)</span></a>    
-      <a class="navbar-brand" href="Data.html">Data</a>  
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button> 
@@ -87,15 +86,56 @@
           <form action="/">
             <h3>Enter below information to see if you would develope the Coronary Heart Disease in 10 years.</h3>
             <div class="info">
-              	<input type="float"value = "1" name="gender" placeholder="Male=1,Female=0" required="required" />
-            	<input type="float"value = "69" name="age" placeholder="Age" required="required" />
-            	<input type="float"value = "0" name="smoker" placeholder="Smoker:Yes=1,No=0" required="required" />
-            	<input type="float" value = "0.0" name="Cigsperday" placeholder="Cigsperday" required="required" />
-            	<input type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" />
-            	<input type="float" value = "0" name="Stroke" placeholder="Stroke:Yes=1,No=0" required="required" />
-            	<input type="float" value = "0" name="hyp" placeholder="Hyper:Yes=1,No=0" required="required" />
-            	<input type="float" value = "0" name="diabetes" placeholder="Diabetes:1,0" required="required" />
-            	<input type="float" value = "195.0" name="Cho" placeholder="Cholostrol" required="required" />
+              <a class = "catetitle">
+          <div class="row">
+            <div class="col-md-4">
+              <table><tr><td>Gender <input type="float"value = "1" name="gender" placeholder="Male=1,Female=0" required="required"/></td>
+                <td>Age<input type="float" name="age" placeholder="Age" required="required" /></td></tr></table>
+              </a>
+              <input type="float"value = "1" name="gender" placeholder="Male=1,Female=0" required="required" />
+              <a class = "catetitle">
+                <h3>Age</h3>
+              </a>
+            	
+              <a class = "catetitle">
+                <h3>Smoker</h3>
+              </a>
+              <input type="float"value = "0" name="smoker" placeholder="Smoker:Yes=1,No=0" required="required" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+                <h3>Cigsperday</h3>
+              </a>
+              <input size = "40px" type="float" value = "0.0" name="Cigsperday" placeholder="Cigsperday" required="required" />
+              <a class = "catetitle">
+                <h3>BPMed: Yes=1,No=0</h3>
+              </a>
+            	<input size = "40px" type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" />
+              <a class = "catetitle">
+                <h3>Stroke:Yes=1,No=0</h3>
+              </a>
+              <input size = "40px" type="float" value = "0" name="Stroke" placeholder="Stroke:Yes=1,No=0" required="required" />
+            </div>
+          </div>        	            	
+          <div class="row">
+            <div class="col-md-4">
+                <h3>Hyper:Yes=1,No=0</h3>
+              </a>
+              <input size = "40px" type="float" value = "0" name="hyp" placeholder="Hyper:Yes=1,No=0" required="required" />
+              <a class = "catetitle">
+                <h3>Diabetes: Yes=1,No=0</h3>
+              </a>
+            	<input size = "40px" type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" />
+              <a class = "catetitle">
+                <h3>Cholostrol</h3>
+              </a>
+              <input type="float" value = "195.0" name="Cho" placeholder="Cholostrol" required="required" />
+            </div>
+          </div>
+            	
+            	
+            	
             	<input type="float" value = "106.0" name="sysbp" placeholder="SysBP" required="required" />
             	<input type="float" value = "70.0" name="diaBP" placeholder="DiaBP" required="required" />
             	<input type="float" value = "26.97" name="bmi" placeholder="BMI" required="required" />
