@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 import pickle
 import numpy as np
 import pandas as pd
@@ -17,14 +17,12 @@ def home():
     #     model_list.append(information)
     # model_list = [float(x) for x in model_list]    
     final_features = np.array(prediction_information.to_numpy())
-    
     #make prediction
     prediction = model.predict(final_features)
             
     return render_template('index.html', prediction_text = prediction)
 
 @app.route('/predict',methods=['POST'])
-
 def predict():
     init_features = [x for x in request.form.values()]
     column_list = ['male', 'age', 'currentSmoker', 'cigsPerDay', 'BPMeds',
