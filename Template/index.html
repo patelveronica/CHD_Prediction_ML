@@ -21,23 +21,7 @@
         <span class="navbar-toggler-icon"></span>
       </button> 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">       
-        <ul class="navbar-nav mr-auto">   
-          <!-- <li class="nav-item active">
-            <a class="nav-link" href="Data.html"> Data <span class="sr-only">(current)</span></a> -->
-          <!-- </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ML Models
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="MaxTemperature.html">Ml_1</a>        
-              <a class="dropdown-item" href="Cloudiness.html">ML_2</a>
-              <a class="dropdown-item" href="WindSpeed.html">ML_3</a>
-              <a class="dropdown-item" href="WindSpeed.html">ML_4</a>
-              <a class="dropdown-item" href="WindSpeed.html">ML_5</a>
-            </div>          
-          </li>                    -->
-        </ul>   
+        <ul class="navbar-nav mr-auto"></ul>   
       </div>
     </nav>
   </div>
@@ -45,40 +29,54 @@
 <div class="container">
   <section class="posts">
     <div class="row">
+      <h1>Coronary Heart Disease Prediction using Random Forest Machine Learning Model</h1>
+      <div class="col-md-5">        
+        <div>          
+            <img src="{{ url_for('static', filename = 'CHDCount.jpg')}}",alt="target count", style="width:400px", class="float-left">
+        </div>
+      </div>
+      <div class="col-md-7">        
+        <div>          
+            <img src="{{ url_for('static', filename = 'Heatmap.jpg')}}",alt="heatmap", style="width:500px", class="float-left">
+        </div>
+      </div>
+    </div>              
+    <div class="row">
       <div class="col-md-12">
-        <h1>Coronary Heart Disease Prediction using Logistic Regression Machine Learning Model</h1>
-        <hr>
-          <div>
-            <a href="https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs">
-            <img src="{{ url_for('static', filename = 'Heart2.jpg')}}",alt="Heart", style="width:300px", class="float-left">
-            </a> 
-          </div>
-            <div>
-                <p>Problem: Cardiovascular disease is presently the leading problem of death worldwide. It is most common in the US. 
-                  Every 40 seconds one person dies from cardiovascular disease. About 660,000 people in the US die from 
-                  heart disease each year, that’s 1 in every 4 deaths. Diastolic Blood Pressure and Systolic Blood Pressure 
-                  are also related to cardiovascular risk. Thus, a feasible and accurate prediction of heart-related diseases
-                  is very important. This research intends to pinpoint the most risk factors of heart diseases.
-                  We are going to analyse the datasets and compare the accuracy score in multiple the Machine Learning models. We will pick the best
-                  model which gives us the highest accuracy score.<br> <br><br>
-                  
-                  Machine Learning Models:<br>
-                  1)	Logistic Regression <br>
-                  2)	K-Nearest Neighbor <br>
-                  3)	Super Vector Machine <br>
-                  4)	Random Forest <br>
-                  5)	Deep Learning
-                </p>
-                <p>The dataset was collected from Kaggle website, from an ongoing Cardiovascular study of Framingham. 
-                  The goal of the Machine Learning model is to predict whether the patient has a 10-year risk of future heart diseases. 
-                  The Framingham dataset consists of 4238 patient’s records with 17 attributes.
-
-                  Our goal is to prepare the dataset for Machine Learning models to predict more accurate score based on 
-                  user’s input of certain features. We will clean the data, analyze, and graph the data to have better 
-                  understanding. We will test and train the clean data with each of Machine Learning model and pick the 
-                  best model that produces high accuracy score. 
-                </p> 
-           </div>
+        <div>
+          <p>   Problem: Cardiovascular disease is presently the leading problem of death worldwide. It is most common in the US. 
+              Every 40 seconds one person dies from cardiovascular disease. About 660,000 people in the US die from 
+              heart disease each year, that’s 1 in every 4 deaths. Diastolic Blood Pressure and Systolic Blood Pressure 
+              are also related to cardiovascular risk. Thus, a feasible and accurate prediction of heart-related diseases
+              is very important. This research intends to pinpoint the most risk factors of heart diseases.
+              We are going to analyse the datasets and compare the accuracy score in multiple the Machine Learning models. We will pick the best
+              model which gives us the highest accuracy score.
+              <br><br>              
+                The dataset was collected from www.nhlbi.nih.gov, from an ongoing Cardiovascular study of Framingham. 
+              The goal of the Machine Learning model is to predict whether the patient has a 10-year risk of future heart diseases. 
+              The Framingham dataset consists of 4238 patient’s records with 17 attributes.
+              <br><br>
+                Our goal is to prepare the dataset for Machine Learning models to predict more accurate score based on 
+              user’s input of certain features. We will clean the data, analyze, and graph the data to have better 
+              understanding. We will test and train the clean data with each of Machine Learning model and pick the 
+              best model that produces high accuracy score. 
+          </p>
+        </div>
+      </div>        
+    </div>                        
+      <div class="row">
+        <div class="col-md-3">              
+          <h3>Machine Learning Models:<br>
+              1)	Logistic Regression <br>
+              2)	K-Nearest Neighbor <br>
+              3)	Super Vector Machine <br>
+              4)	Random Forest <br>
+              5)	Deep Learning
+          </h3>
+        </div>
+        <div class = "col-md-9">
+          <img src="{{ url_for('static', filename = 'features.jpg')}}",alt="features", style="width:600px", class="float-left">
+        </div>   
       </div>          
       <div class="main-block">
         <div class="left-part">        
@@ -86,66 +84,42 @@
           <form action="/">
             <h3>Enter below information to see if you would develope the Coronary Heart Disease in 10 years.</h3>
             <div class="info">
-              <a class = "catetitle">
           <div class="row">
             <div class="col-md-4">
-              <table><tr><td>Gender <input type="float"value = "1" name="gender" placeholder="Male=1,Female=0" required="required"/></td>
-                <td>Age<input type="float" name="age" placeholder="Age" required="required" /></td></tr></table>
-              </a>
-              <input type="float"value = "1" name="gender" placeholder="Male=1,Female=0" required="required" />
-              <a class = "catetitle">
-                <h3>Age</h3>
-              </a>
-            	
-              <a class = "catetitle">
-                <h3>Smoker</h3>
-              </a>
-              <input type="float"value = "0" name="smoker" placeholder="Smoker:Yes=1,No=0" required="required" />
+              <table><tr><td>Male=1,Female=0<input type="float"value = "1" name="gender" placeholder="Male=1,Female=0" required="required"/></td>
+                <td>Age<input type="float" value = 69 name="age" placeholder="Age" required="required"></td>
+                <td>Smoker:Yes=1,No=0 <input type="float"value = "0" name="smoker" placeholder="Smoker:Yes=1,No=0" required="required"></td>
+                <td>CigsPerDay<input type="float"value = "0" name="smoker" placeholder="Smoker:Yes=1,No=0" required="required" /></td>
+                <td>BPMed:Yes=1,No=0<input type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" /></td>
+              </tr></table>
             </div>
           </div>
+          <br>
           <div class="row">
             <div class="col-md-4">
-                <h3>Cigsperday</h3>
-              </a>
-              <input size = "40px" type="float" value = "0.0" name="Cigsperday" placeholder="Cigsperday" required="required" />
-              <a class = "catetitle">
-                <h3>BPMed: Yes=1,No=0</h3>
-              </a>
-            	<input size = "40px" type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" />
-              <a class = "catetitle">
-                <h3>Stroke:Yes=1,No=0</h3>
-              </a>
-              <input size = "40px" type="float" value = "0" name="Stroke" placeholder="Stroke:Yes=1,No=0" required="required" />
-            </div>
-          </div>        	            	
-          <div class="row">
-            <div class="col-md-4">
-                <h3>Hyper:Yes=1,No=0</h3>
-              </a>
-              <input size = "40px" type="float" value = "0" name="hyp" placeholder="Hyper:Yes=1,No=0" required="required" />
-              <a class = "catetitle">
-                <h3>Diabetes: Yes=1,No=0</h3>
-              </a>
-            	<input size = "40px" type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" />
-              <a class = "catetitle">
-                <h3>Cholostrol</h3>
-              </a>
-              <input type="float" value = "195.0" name="Cho" placeholder="Cholostrol" required="required" />
+              <table><tr><td>Stroke:Yes=1,No=0<input type="float" value = "0" name="Stroke" placeholder="Stroke:Yes=1,No=0" required="required" /></td>
+                <td>Hyper:Yes=1,No=0<input type="float" value = "0" name="hyp" placeholder="Hyper:Yes=1,No=0" required="required" /></td>
+                <td>Diabetes: Yes=1,No=0<input type="float" value = "0.0" name="bpmed" placeholder="BPMed: Yes=1,No=0" required="required" /></td>
+                <td>Cholostrol<input type="float" value = "195.0" name="Cho" placeholder="Cholostrol" required="required" /></td>
+                <td>DiaBP <input type="float" value = "106.0" name="sysbp" placeholder="SysBP" required="required" /></td>
+              </tr></table>
             </div>
           </div>
-            	
-            	
-            	
-            	<input type="float" value = "106.0" name="sysbp" placeholder="SysBP" required="required" />
-            	<input type="float" value = "70.0" name="diaBP" placeholder="DiaBP" required="required" />
-            	<input type="float" value = "26.97" name="bmi" placeholder="BMI" required="required" />
-            	<input type="float" value = "80.0" name="HR" placeholder="HeartRate" required="required" />
-            	<input type="float" value = "77.0" name="glu" placeholder="Glucose" required="required" />             
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <table><tr><td>DiaBP<input type="float" value = "70.0" name="diaBP" placeholder="DiaBP" required="required" /></td>
+                <td>BMI<input type="float" value = "26.97" name="bmi" placeholder="BMI" required="required" /></td>
+                <td>HeartRate<input type="float" value = "80.0" name="HR" placeholder="HeartRate" required="required" /></td>
+                <td>Glucose<input type="float" value = "77.0" name="glu" placeholder="Glucose" required="required" /></td>
+              </tr></table>
+            </div>
+          </div>
+          <br>     
           	<button type="submit" >Predict</button>
           </form>
           <br>
-          <br>
-          <h3>Your result is:{{ prediction_text }}. Based on Logistic Regression model, this result is about 85.6% accurate.</h3>
+          <h3>Your result is:{{ prediction_text }}. Based on Random forest model, this result is about 85.6% accurate.</h3>
         </div>
     </div>
   </section>    
