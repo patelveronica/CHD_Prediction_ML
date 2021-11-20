@@ -1,11 +1,10 @@
 
-**Analysis of Framingham Heart Study
+## Analysis of Framingham Heart Study
 
-**Domain :
+## Domain :
 Healthcare
 
-**Table of Contents:
-
+## Table of Contents:
 1. Information
     Reason for Choosing this Dataset
     Source
