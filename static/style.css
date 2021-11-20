@@ -1,6 +1,6 @@
 h1 {
     color: rgb(13, 95, 122);
-    font-size: 25px;
+    font-size: 15px;
     padding: 4px;
     /* text-align: left; */
     margin-top: 15px;
@@ -15,7 +15,8 @@ h1 {
   p {
     text-align:left;
     font-size: 15px;
-    margin-top: 40px;
+    margin-top: 20px;
+    padding: 10px;
     }
   
   h3{
