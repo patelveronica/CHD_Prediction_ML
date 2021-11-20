@@ -8,7 +8,8 @@
     <title>Coronary Heart Disease Dashboard</title>
     <!-- bring in bootstrap stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel = "stylesheet" href = "{{  url_for('static', filename = 'style.css')  }}">
     
 </head>
 <body>
@@ -50,35 +51,34 @@
         <hr>
           <div>
             <a href="https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs">
-            <img src="Resources/assets/images/Heart2.jpg",alt="Heart", style="width:300px", class="float-left">
+            <img src="{{ url_for('static', filename = 'Heart2.jpg')}}",alt="Heart", style="width:300px", class="float-left">
             </a> 
           </div>
             <div>
-              <p>Problem: Cardiovascular disease is presently the leading problem of death worldwide. It is most common in the US. 
-                Every 40 seconds one person dies from cardiovascular disease. About 660,000 people in the US die from 
-                heart disease each year, that’s 1 in every 4 deaths. Diastolic Blood Pressure and Systolic Blood Pressure 
-                are also related to cardiovascular risk. Thus, a feasible and accurate prediction of heart-related diseases
-                is very important. This research intends to pinpoint the most risk factors of heart diseases.
-                We are going to analyse the datasets and compare the accuracy score in multiple the Machine Learning models. We will pick the best
-                model which gives us the highest accuracy score.<br> <br>
-                
-                Machine Learning Models:<br>
-                1)	Logistic Regression <br>
-                2)	K-Nearest Neighbor <br>
-                3)	Super Vector Machine <br>
-                4)	Random Forest <br>
-		5)	Deep Learning
- 
-              </p>
-              <p>The dataset was collected from Kaggle website, from an ongoing Cardiovascular study of Framingham. 
-                The goal of the Machine Learning model is to predict whether the patient has a 10-year risk of future heart diseases. 
-                The Framingham dataset consists of 4238 patient’s records with 17 attributes.
+                <p>Problem: Cardiovascular disease is presently the leading problem of death worldwide. It is most common in the US. 
+                  Every 40 seconds one person dies from cardiovascular disease. About 660,000 people in the US die from 
+                  heart disease each year, that’s 1 in every 4 deaths. Diastolic Blood Pressure and Systolic Blood Pressure 
+                  are also related to cardiovascular risk. Thus, a feasible and accurate prediction of heart-related diseases
+                  is very important. This research intends to pinpoint the most risk factors of heart diseases.
+                  We are going to analyse the datasets and compare the accuracy score in multiple the Machine Learning models. We will pick the best
+                  model which gives us the highest accuracy score.<br> <br><br>
+                  
+                  Machine Learning Models:<br>
+                  1)	Logistic Regression <br>
+                  2)	K-Nearest Neighbor <br>
+                  3)	Super Vector Machine <br>
+                  4)	Random Forest <br>
+                  5)	Deep Learning
+                </p>
+                <p>The dataset was collected from Kaggle website, from an ongoing Cardiovascular study of Framingham. 
+                  The goal of the Machine Learning model is to predict whether the patient has a 10-year risk of future heart diseases. 
+                  The Framingham dataset consists of 4238 patient’s records with 17 attributes.
 
-                Our goal is to prepare the dataset for Machine Learning models to predict more accurate score based on 
-                user’s input of certain features. We will clean the data, analyze, and graph the data to have better 
-                understanding. We will test and train the clean data with each of Machine Learning model and pick the 
-                best model that produces high accuracy score. 
-               </p> 
+                  Our goal is to prepare the dataset for Machine Learning models to predict more accurate score based on 
+                  user’s input of certain features. We will clean the data, analyze, and graph the data to have better 
+                  understanding. We will test and train the clean data with each of Machine Learning model and pick the 
+                  best model that produces high accuracy score. 
+                </p> 
            </div>
       </div>          
       <div class="main-block">

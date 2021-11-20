@@ -1,20 +1,44 @@
 
-**Analysis of Framingham Heart Study
+## Analysis of Framingham Heart Study
 
-**Domain :
-
+## Domain :
 Healthcare
 
-**Table of Contents:
+## Table of Contents:
+1. Information
+    Reason for Choosing this Dataset
+    Source
+    Details
+    Objective
+2. Loading Dataset
+    Importing packages
+    Reading Data
+    Shape of data
+    Dtype
+3. Data Cleansing & EDA
+    Checking Null values
+    Correlation Heatmap
+    Null values Imputation
+    Descriptive Statistics
+    EDA (Phase 1)
+    Mean Encoding
+    EDA (Phase 2)
+    Logarithmic Transformation
+4. Normalization
+5. Modelling
+    Splitting Data & Choosing Algorithms
+    Logistic Regression Implementation
+    Logistic Regression (Adding Class weight parameter)
+    Over-Sampling Dataset (SMOTE)
+    Logistic Regression Implementation
+    Evaluating Metrics (R2 and RMSLE)
+6. Conclusion
 
-Information
-Loading Dataset
-Data Cleansing & EDA
-Conclusion
+## Reason for Choosing this Dataset:
+WE want to investigate how Machine Learning can help Healthcare industries to become Data-Driven. Where, ML can predict the likelihood of subject who can suffer from a particular disease. Thereby, respective actions in the form of Treatments or Preventive Measures would be brought into consideration on the Individual. However, this Statistical models are not prepared to use for production environment.
+
 Source (Download On Request) : https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs
-
 ![coronary-heart-disease-chd-n](https://user-images.githubusercontent.com/85118624/127723313-de5f65a3-b149-4a21-bc8b-cc02fd205b58.jpg)
-
 
 **Details : 
 
@@ -52,17 +76,15 @@ And finally the response variable : + TenYearCHD : The 10 year risk of coronary 
 **Questions:
 
 1. What is the spread of each attribute in the given data set ?
-2. What are the lifestyle changes seen in people with heart disease?
-3. Can we get the count of CHD based on gender?
-4. Which characteristics are most prevalent in people have heart disease?
+2. What are the count of CHD w.r.t to Gender?
+3. Which characteristics are most prevalent in people have heart disease?
 5. Can we group people of certain age together and figure out how Sys. BP and Dia. BP affects by Age group ?
 6. How is our variables distributed? Are they imbalanced?
-7. What are the weakness of this dataset?
-
+7. Can we design a ML model to predict a new arrival patient rist of CHD?
 
 **Objective :
 
-To build a classification model that predicts heart disease in a subject. (Target column to predict is 'TenYearCHD' where CHD = Coronary Heart Disease)
+The goal is to make some logestic regression model as one of the predictive models on a FHS dataset, and reviewing some exploratory and modelling techiniques.
 
 **Steps to reach the objective:
 
@@ -76,34 +98,31 @@ To build a classification model that predicts heart disease in a subject. (Targe
 
 The Framingham Risk Score (FRS) has driven cardiovascular disease risk screening for many years. In general, there are 2 main problems with current dataset. First, this screening happened based on known risk factors and not the actual presence of disease. Second, it is based on epidemiology.
 Epidemiologic data can be tricky because it tells us about issues in a given population. However, it does NOT necessarily indicate risk for a specific person.
->>>>>>> aedcb661887a552e5335746579e69e6e79234254
-
-**Domain : Healthcare
 
 **Importing Libraries:
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-%matplotlib inline
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import confusion_matrix, accuracy_score, roc_curve, classification_report
-import pickle
-import Flask
-
+1. import pandas as pd
+2. import numpy as np
+3. import matplotlib.pyplot as plt
+4. %matplotlib inline
+5. import seaborn as sns
+6. from sklearn.model_selection import train_test_split
+7. from sklearn.linear_model import LogisticRegression
+8. from sklearn.neighbors import KNeighborsClassifier
+9. from sklearn.ensemble import RandomForestClassifier
+10. from sklearn.tree import DecisionTreeClassifier
+11. from sklearn.metrics import confusion_matrix, accuracy_score, roc_curve, classification_report
+12. import pickle
+13. import Flask
 
 **Tech used to deploy the app:
-Database to store user input: MongoDB
-Model saved: Ml_Model.py
-Flask App: app.py
-Procfile.txt
-model.pickle
-Webpage: index.html
-style.css
+
+1. User Input saved in: csv
+2. Model saved: Ml_Model.py
+3. Flask App: app.py
+4. Procfile.txt
+5. model.pickle
+6. Webpage: index.html
+7. style.css
+8. Bootstrap
 
 
