@@ -5,10 +5,39 @@
 Healthcare
 
 **Table of Contents:
-Information
-Loading Dataset
-Data Cleansing & EDA
-Conclusion
+
+1. Information
+    Reason for Choosing this Dataset
+    Source
+    Details
+    Objective
+2. Loading Dataset
+    Importing packages
+    Reading Data
+    Shape of data
+    Dtype
+3. Data Cleansing & EDA
+    Checking Null values
+    Correlation Heatmap
+    Null values Imputation
+    Descriptive Statistics
+    EDA (Phase 1)
+    Mean Encoding
+    EDA (Phase 2)
+    Logarithmic Transformation
+4. Normalization
+5. Modelling
+    Splitting Data & Choosing Algorithms
+    Logistic Regression Implementation
+    Logistic Regression (Adding Class weight parameter)
+    Over-Sampling Dataset (SMOTE)
+    Logistic Regression Implementation
+    Evaluating Metrics (R2 and RMSLE)
+6. Conclusion
+
+## Reason for Choosing this Dataset:
+WE want to investigate how Machine Learning can help Healthcare industries to become Data-Driven. Where, ML can predict the likelihood of subject who can suffer from a particular disease. Thereby, respective actions in the form of Treatments or Preventive Measures would be brought into consideration on the Individual. However, this Statistical models are not prepared to use for production environment.
+
 Source (Download On Request) : https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs
 ![coronary-heart-disease-chd-n](https://user-images.githubusercontent.com/85118624/127723313-de5f65a3-b149-4a21-bc8b-cc02fd205b58.jpg)
 
@@ -48,16 +77,15 @@ And finally the response variable : + TenYearCHD : The 10 year risk of coronary 
 **Questions:
 
 1. What is the spread of each attribute in the given data set ?
-2. What are the lifestyle changes seen in people with heart disease?
-3. Can we get the count of CHD based on gender?
-4. Which characteristics are most prevalent in people have heart disease?
+2. What are the count of CHD w.r.t to Gender?
+3. Which characteristics are most prevalent in people have heart disease?
 5. Can we group people of certain age together and figure out how Sys. BP and Dia. BP affects by Age group ?
 6. How is our variables distributed? Are they imbalanced?
-7. What are the weakness of this dataset?
+7. Can we design a ML model to predict a new arrival patient rist of CHD?
 
 **Objective :
 
-To build a classification model that predicts heart disease in a subject. (Target column to predict is 'TenYearCHD' where CHD = Coronary Heart Disease)
+The goal is to make some logestic regression model as one of the predictive models on a FHS dataset, and reviewing some exploratory and modelling techiniques.
 
 **Steps to reach the objective:
 
