@@ -30,12 +30,12 @@
   <section class="posts">
     <div class="row">
       <h1>Coronary Heart Disease Prediction using Random Forest Machine Learning Model</h1>
-      <div class="col-md-5">        
+      <div class="col-md-6">        
         <div>          
             <img src="{{ url_for('static', filename = 'CHDCount.jpg')}}",alt="target count", style="width:400px", class="float-left">
         </div>
       </div>
-      <div class="col-md-7">        
+      <div class="col-md-6">        
         <div>          
             <img src="{{ url_for('static', filename = 'Heatmap.jpg')}}",alt="heatmap", style="width:500px", class="float-left">
         </div>
@@ -75,9 +75,10 @@
           </h3>
         </div>
         <div class = "col-md-9">
-          <img src="{{ url_for('static', filename = 'features.jpg')}}",alt="features", style="width:600px", class="float-left">
+          <img src="{{ url_for('static', filename = 'features.jpg')}}",alt="features", style="width:400px", class="float-left">
         </div>   
-      </div>          
+      </div>
+    <div class="container">          
       <div class="main-block">
         <div class="left-part">        
          </div>     
@@ -122,6 +123,7 @@
           <h3>Your result is:{{ prediction_text }}. Based on Random forest model, this result is about 85.6% accurate.</h3>
         </div>
     </div>
+  </div>  
   </section>    
 </div> 
    
